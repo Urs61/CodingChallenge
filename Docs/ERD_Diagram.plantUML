@@ -1,0 +1,20 @@
+@startuml
+
+entity Soldier{
+    *Id : number <<Key>>
+    --
+    FirstName: text
+    ...
+    ...
+}
+
+entity Location{
+   SoldierId: number <<FK>>
+   --
+   TimeStamp: date
+   Position: position
+}
+
+Soldier ||--o{ Location
+@end
+

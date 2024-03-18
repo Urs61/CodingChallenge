@@ -1,0 +1,24 @@
+@startuml
+
+
+    namespace Model{
+        class SoldierRepo
+    }
+
+    namespace Services{
+        class Emulator
+        class Service
+        Service *--> Emulator
+        Service *--> Model.SoldierRepo
+    }
+
+    namespace ViewModel{
+        class MapItem
+        class MapViewModel
+        MapViewModel "1" *--"*" MapItem
+        MapViewModel *--> Services.Service
+    }
+
+
+@end
+
